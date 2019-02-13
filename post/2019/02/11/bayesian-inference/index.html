@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Bayesian inference - Bayesian Hut</title>
+    <meta property="og:title" content="Bayesian inference - Bayesian Hut">
+    
+    <meta name="twitter:card" content="summary">
+
+    
+      
+    
+
+    
+      
+      <meta property="description" content="In frequentist inference, a parameter \(\theta\) is assumed as a fixed unknown quantity, however, in Bayesian inference, we assume a parameter \(\theta\) to be a random variable. For example, the &amp;hellip;">
+      <meta property="og:description" content="In frequentist inference, a parameter \(\theta\) is assumed as a fixed unknown quantity, however, in Bayesian inference, we assume a parameter \(\theta\) to be a random variable. For example, the &amp;hellip;">
+      
+    
+
+    
+    
+
+    
+
+    
+    
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link rel="stylesheet" href="/css/custom.css" />
+
+  </head>
+
+  
+  <body class="post">
+    <header class="masthead">
+      <h1><a href="/">Bayesian Hut</a></h1>
+
+<p class="tagline">A Hugo theme ported from the static site generator Ivy.</p>
+
+      <nav class="menu">
+  <input id="menu-check" type="checkbox" />
+  <label id="menu-label" for="menu-check" class="unselectable">
+    <span class="icon close-icon">✕</span>
+    <span class="icon open-icon">☰</span>
+    <span class="text">Menu</span>
+  </label>
+  <ul>
+  
+  
+  <li><a href="/">Home</a></li>
+  
+  <li><a href="/about/">About</a></li>
+  
+  <li><a href="/categories/">Categories</a></li>
+  
+  <li><a href="/tags/">Tags</a></li>
+  
+  <li><a href="/index.xml">Subscribe</a></li>
+  
+  
+  </ul>
+</nav>
+
+    </header>
+
+    <article class="main">
+      <header class="title">
+      
+<h1>Bayesian inference</h1>
+
+<h3>S Jin
+  /  2019-02-11</h3>
+<hr>
+
+
+      </header>
+
+
+
+
+
+
+<div id="two-approaches" class="section level3">
+<h3>1 Two approaches</h3>
+<p>In frequentist inference, a parameter <span class="math inline">\(\theta\)</span> is assumed as a fixed unknown quantity, however, in Bayesian inference, we assume a parameter <span class="math inline">\(\theta\)</span> to be a random variable. For example, the coefficients in linear regression model, or unknown population parameters, are random variables.</p>
+</div>
+<div id="bayes-rule" class="section level3">
+<h3>2 Bayes’ rule</h3>
+<p>Let</p>
+<ul>
+<li><p><span class="math inline">\(\theta\)</span> represents proportation of people who are mutants in Atlanta.</p></li>
+<li><p><span class="math inline">\(Y\)</span> is the number of mutants from a random sample in Atlanta.</p></li>
+</ul>
+<p>Before collecting and observing the data <span class="math inline">\(Y\)</span>, we have some beliefs (or preknowledge) about <span class="math inline">\(\theta\)</span>, <span class="math inline">\(p(\theta)\)</span>; and some beliefs about <span class="math inline">\(Y\)</span> for given each value of <span class="math inline">\(\theta\)</span>, <span class="math inline">\(p(y|\theta)\)</span>. Then we construct a joint density from</p>
+<ul>
+<li><p><span class="math inline">\(p(\theta)\)</span>;</p></li>
+<li><p><span class="math inline">\(p(y|\theta)\)</span>.</p></li>
+</ul>
+<p>After collecting and observing the data <span class="math inline">\(Y\)</span>, we update our preknowledge (<span class="math inline">\(\theta\)</span>) and have <span class="math inline">\(p(\theta|y)\)</span>, which is conditional probability. According to the Bayes’ rule, <span class="math display">\[p(\theta|y) = \frac{p(\theta,y)}{p(y)}=\frac{p(\theta)p(y|\theta)}{p(y)}=\frac{p(\theta)p(y|\theta)}{\int_{\theta}p(\theta)p(y|\theta)d\theta}.\]</span> As the <span class="math inline">\(p(y)\)</span> does not rely on the random varialbe <span class="math inline">\(\theta|y\)</span>, we can omit it and use proportion form, yielding <em>unnormalized posterior density</em> on the right side of following: <span class="math display">\[p(\theta|y)\propto p(\theta)p(y|\theta),\]</span> where <span class="math inline">\(p(y|\theta)\)</span> is taken here as a function of <span class="math inline">\(\theta\)</span>, not of <span class="math inline">\(y\)</span>.</p>
+</div>
+
+
+  <footer>
+  
+<nav class="post-nav">
+  <span class="nav-prev">&larr; <a href="/post/2016/02/14/a-plain-markdown-post/">A Plain Markdown Post</a></span>
+  <span class="nav-next"></span>
+</nav>
+
+
+
+
+
+<script src="//yihui.name/js/math-code.js"></script>
+<script async src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+<script async src="//yihui.name/js/center-img.js"></script>
+
+  
+
+  
+  <hr>
+  <div class="copyright">&copy; <a href="https://yihui.name">Yihui Xie</a> 2017 | <a href="https://github.com/yihui">Github</a> | <a href="https://twitter.com/xieyihui">Twitter</a></div>
+  
+  </footer>
+  </article>
+  
+  </body>
+</html>
+

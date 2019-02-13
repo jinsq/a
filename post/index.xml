@@ -1,15 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Jin&#39;s home</title>
+    <title>Posts on Bayesian Hut</title>
     <link>/post/</link>
-    <description>Recent content in Posts on Jin&#39;s home</description>
+    <description>Recent content in Posts on Bayesian Hut</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 14 Feb 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 11 Feb 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Bayesian inference</title>
+      <link>/post/2019/02/11/bayesian-inference/</link>
+      <pubDate>Mon, 11 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2019/02/11/bayesian-inference/</guid>
+      <description>1 Two approaches In frequentist inference, a parameter \(\theta\) is assumed as a fixed unknown quantity, however, in Bayesian inference, we assume a parameter \(\theta\) to be a random variable. For example, the coefficients in linear regression model, or unknown population parameters, are random variables.
+ 2 Bayes’ rule Let
+ \(\theta\) represents proportation of people who are mutants in Atlanta.
+ \(Y\) is the number of mutants from a random sample in Atlanta.</description>
+    </item>
     
     <item>
       <title>A Plain Markdown Post</title>
